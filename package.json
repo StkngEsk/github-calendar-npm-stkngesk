@@ -1,7 +1,7 @@
 {
   "name": "@stkngesk/github-calendar",
   "version": "1.0.0",
-  "description": "Gets Github calendar data by user and year.",
+  "description": "Gets Github calendar data in format SVG by user and year.",
   "main": "dist/index.js",
   "umd:main": "dist/index.umd.js",
   "module": "dist/index.mjs",
@@ -15,6 +15,27 @@
       "^.+\\.[t|j]sx?$": "babel-jest"
     }
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "files": [
+    "dist",
+    "package.json",
+    "README.md"
+  ],
   "keywords": [
     "Github",
     "Github Calendar",
@@ -30,8 +51,14 @@
     "@babel/plugin-transform-runtime": "^7.13.15",
     "@babel/preset-env": "^7.14.1",
     "babel-jest": "^26.6.3",
+    "eslint": "^7.26.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "husky": "^6.0.0",
     "jest": "^26.6.3",
-    "microbundle": "^0.13.0"
+    "lint-staged": "^11.0.0",
+    "microbundle": "^0.13.0",
+    "prettier": "^2.2.1"
   },
   "dependencies": {
     "axios": "^0.21.1",
