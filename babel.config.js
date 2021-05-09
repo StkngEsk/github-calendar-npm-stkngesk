@@ -6,12 +6,11 @@ module.exports = {
         }
     ],
     plugins: [
-        ["@babel/transform-runtime",{
-            "absoluteRuntime": false,
-            "corejs": false,
-            "helpers": false,
-            "regenerator": true,
-            "version": "7.0.0-beta.0"
-          }]
+        [
+            "@babel/transform-runtime",
+            {
+                "helpers": false,
+            }
+        ]
     ]
 };
