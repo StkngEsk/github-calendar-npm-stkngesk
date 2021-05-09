@@ -1,5 +1,5 @@
 {
-  "name": "@stkngesk/github-calendar",
+  "name": "@christianesk/github-calendar",
   "version": "1.0.0",
   "description": "Gets Github calendar data in format SVG by user and year.",
   "main": "dist/index.js",
