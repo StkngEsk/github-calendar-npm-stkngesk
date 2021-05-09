@@ -28,9 +28,18 @@ describe("index test ", () => {
 
     it('should get github calendar', async () => {
         const getSpy = jest.spyOn(axios, 'get').mockResolvedValueOnce({ data: html });
-        const actual = await githubCalendar('christianesk', "2020");
+        const actual = await githubCalendar("christianesk", "2020");
         expect(actual).toEqual(data);
         expect(getSpy).toBeCalledWith(url);
+    });
+
+    it('should get github calendar with data empty', async () => {
+        const getSpy = jest.spyOn(axios, 'get').mockResolvedValueOnce({ data: html });
+        const actual = await githubCalendar("", "");
+        data.calendar = "";
+        data.textContributions="";
+        expect(actual).toEqual(data);
+        expect(getSpy).toBeCalledTimes(0);
     });
 
 });
