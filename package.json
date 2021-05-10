@@ -1,6 +1,6 @@
 {
   "name": "@christianesk/github-calendar",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Gets Github calendar data in format SVG by user and year.",
   "main": "dist/index.js",
   "umd:main": "dist/index.umd.js",
@@ -8,7 +8,9 @@
   "source": "src/index.js",
   "scripts": {
     "test": "jest",
-    "build": "microbundle"
+    "prebuild": "npm test",
+    "build": "microbundle",
+    "prepublish": "npm run build"
   },
   "jest": {
     "transform": {
