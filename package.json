@@ -1,6 +1,6 @@
 {
   "name": "@christianesk/github-calendar",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "Gets Github calendar data in format SVG by user and year.",
   "main": "dist/index.js",
   "umd:main": "dist/index.umd.js",
