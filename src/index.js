@@ -1,6 +1,6 @@
 
-const cheerio = require('cheerio');
-const axios = require('axios');
+import axios from 'axios';
+import cheerio from 'cheerio';
 
 
 const githubCalendar = async (user = "", year = "") => {

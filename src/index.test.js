@@ -1,5 +1,5 @@
 import githubCalendar from ".";
-const axios = require('axios');
+import axios from 'axios';
 
 describe("index test ", () => {
 
