@@ -43,6 +43,14 @@
     "Calendar contributions",
     "contributions"
   ],
+  "homepage": "https://stkngesk.tech",
+  "bugs": {
+    "url": "https://github.com/StkngEsk/github-calendar-npm-stkngesk/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StkngEsk/github-calendar-npm-stkngesk"
+  },
   "author": "Christian Mena <christian.91.gm@hotmail.com> (https://stkngesk.tech)",
   "license": "MIT",
   "devDependencies": {
