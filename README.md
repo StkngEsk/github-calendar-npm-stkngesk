@@ -13,7 +13,26 @@ This project returns a calendar of contributions de Github in SVG format dependi
 
 <br>
 
-## Example
+## TS Example
+
+```ts
+import { getGithubCalendar } from "@christianesk/github-calendar";
+
+const getCalendar = async () => {
+   
+    return await githubCalendar("christianesk", "2020");
+} 
+
+/*Returns an Object with these parameters:
+    //Example
+    { 
+        textContributions: "256 contributions in 2020"      
+        calendar: "<svg>...</svg>",
+    }
+*/
+```
+
+## JS Example
 
 ```js
 const githubCalendar = require("@christianesk/github-calendar");
@@ -31,7 +50,6 @@ const getCalendar = async () => {
     }
 */
 ```
-<br>
 
 ## Authors
 * Christian - [christianesk](https://github.com/Christianesk)
