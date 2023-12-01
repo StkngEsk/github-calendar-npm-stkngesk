@@ -1,5 +1,4 @@
 import { getGithubCalendar } from "../src/index";
-import axios from 'axios';
 import { GetGithubCalendarResponse } from "../src/interfaces/GetGithubCalendarResponse";
 
 describe("GetGithubCalendar", () => {
@@ -12,18 +11,20 @@ describe("GetGithubCalendar", () => {
     beforeEach(() => {
         html = `
         <div>
-            <h2 class="f4 text-normal mb-2">Titulo</h2>
-            <div class="graph-canvas">test html</div>
+            <h2 class="f4 text-normal mb-2">578 contributions in 2020</h2>
+            <div class="graph-canvas"><div>Github content calendar.....</div></div>
         </div>
     `;
         url = 'https://github.com/users/christianesk/contributions?from=2020-01-01&to=2020-12-31';
 
         data = {
-            textContributions: "Titulo",
-            calendar: "test html"
+            textContributions: "578 contributions in 2020",
+            calendar: "<div>Github content calendar.....</div>"
         };
 
-        get_spy = jest.spyOn(axios, 'get').mockResolvedValueOnce({ data: html });
+        get_spy = jest.spyOn(global, "fetch").mockImplementation(async () =>
+            Promise.resolve(new Response(html))
+        );
     });
 
     afterEach(() => {
