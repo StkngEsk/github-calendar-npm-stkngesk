@@ -1,6 +1,6 @@
 {
   "name": "@christianesk/github-calendar",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Gets Github calendar data in format SVG by user and year.",
   "main": "lib/index.js",
   "module": "lib/*.mjs",
@@ -12,6 +12,9 @@
     "build": "tsup",
     "prepublish": "npm run build",
     "publish": "npm run prepublish"
+  },
+  "exports": {
+    ".": "./lib/index.js"
   },
   "lint-staged": {
     "*.js": [
