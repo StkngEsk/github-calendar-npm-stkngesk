@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "outDir": "lib",
+    "module": "ESNext",
+    "target": "es6",
+    "lib": [
+      "es6",
+      "DOM",
+      "ES2016",
+      "ES2017"
+    ],
+    "sourceMap": true,
+    "allowJs": true,
+    "declaration": true,
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "interfaces/*": [
+        "src/interfaces/*"
+      ]
+    }
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "test"
+  ]
+}

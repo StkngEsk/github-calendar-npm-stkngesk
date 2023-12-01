@@ -1,0 +1,7 @@
+src
+test
+.eslintrc
+tsconfig.json
+*.config.ts
+node_modules/
+*.tgz
