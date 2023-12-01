@@ -3,9 +3,12 @@
 [![npm Version][NPM VERSION BADGE]][NPM PAGE]
 [![GitHub License][LICENSE BADGE]][LICENSE PAGE]
 
-This project returns a calendar of contributions de Github in SVG format depending on the `user` and `year` chosen.
+This project returns a calendar of contributions de Github in a `<div>...</div>` format depending on the `user` and `year` chosen.
 
-<br>
+## Content
+
+- [Installation](#installation)
+- [Implementation](#implementation-examples)
 
 ## Installation
 
@@ -13,43 +16,53 @@ This project returns a calendar of contributions de Github in SVG format dependi
 
 <br>
 
-## TS Example
+### TS Example
 
 ```ts
 import { getGithubCalendar } from "@christianesk/github-calendar";
 
 const getCalendar = async () => {
    
-    return await githubCalendar("christianesk", "2020");
+    return await getGithubCalendar("christianesk", "2020");
 } 
 
 /*Returns an Object with these parameters:
     //Example
     { 
         textContributions: "256 contributions in 2020"      
-        calendar: "<svg>...</svg>",
+        calendar: "<div>...</div>",
     }
 */
 ```
 
-## JS Example
+### JS Example
 
 ```js
-const githubCalendar = require("@christianesk/github-calendar");
+const getGithubCalendar = require("@christianesk/github-calendar");
 
 const getCalendar = async () => {
    
-    return await githubCalendar("christianesk", "2020");
+    return await getGithubCalendar("christianesk", "2020");
 } 
 
 /*Returns an Object with these parameters:
     //Example
     { 
         textContributions: "256 contributions in 2020"      
-        calendar: "<svg>...</svg>",
+        calendar: "<div>...</div>",
     }
 */
 ```
+
+## Implementation examples
+
+### [Using cloudflare workers](https://github.com/StkngEsk/github-contrib-calendar-workers)
+
+### [Fetch cloudflare workers with Angular](https://github.com/StkngEsk/github-contrib-calendar-fe)
+
+### [Styles CSS to github calendar](https://github.com/StkngEsk/github-contrib-calendar-fe/tree/master/src/assets/css)
+
+### [Using Framework Astro](https://github.com/StkngEsk/github-calendar-astro-example)
 
 ## Authors
 * Christian - [christianesk](https://github.com/Christianesk)
