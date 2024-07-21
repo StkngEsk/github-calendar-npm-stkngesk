@@ -62,7 +62,7 @@ const getCalendar = async () => {
 
 ### [Styles CSS to github calendar](https://github.com/StkngEsk/github-contrib-calendar-fe/tree/master/src/assets/css)
 
-### [Using Framework Astro](https://github.com/StkngEsk/github-calendar-astro-example)
+### [Using Framework Astro](https://github.com/StkngEsk/github-contrib-calendar-astro)
 
 ## Authors
 * Christian - [christianesk](https://github.com/Christianesk)
